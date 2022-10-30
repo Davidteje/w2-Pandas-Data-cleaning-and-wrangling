@@ -2,12 +2,12 @@
 
 Set de datos inicial: attacks.csv
 
-Indicaciones:
+INDICACIONES RECIBIDAS:
 - Para borrar columnas deben tener almenos 80% valores nulos.
 - Al menos deben quedar 6000 filas.
 - Mismo tipo de dato por columna.
 
-Consideraciones adoptadas para el proyecto:
+CONSIDERACIONES ADOPTADAS DURANTE EL PROYECTO:
 - Durante el proceso de limpieza del df se ha dado prioridad a las siguientes columnas de datos, ya que son las que permitirán obtener unas primeras estadísticas más significativas:
     - Year
     - Type
@@ -18,7 +18,7 @@ Consideraciones adoptadas para el proyecto:
     - Time
     - Species
 
-Proceso realizado:
+PROCESO DE LIMPIEZA REALIZADO:
 - Se importan las librerías Numpy y Pandas
 - Se importa el fichero csv y se realiza una copia del df original.
 - Se realiza una exploración inicial del df.
@@ -45,11 +45,23 @@ Proceso realizado:
     - Para la mayoría de columnas se han indicado 'unknowns' si no era posible obtener el dato faltante por la información de otras columnas.
     - Se ha creado una nueva columna 'time_2' donde se identifica la etapa del día en la que se registró el ataque en la columna 'time'.
     - Se ha creado una nueva columna 'species_2' donde se agrupan las especies de la columna 'sepcies'.
-Se ha detectado que existen valores "invalid" en las columnas species (103) y type (547). 103 en ambas columnas. Se realizará un Check antes de proceder a borrarlas.
+- Se ha detectado que existen valores "invalid" en las columnas species (103) y type (547). 103 en ambas columnas. Se realizará un Check antes de proceder a borrarlas.
+- Se han calculado datos estadísticos de las columnas que se han considerado como significativas.
+- Se ha revisado y optimizado la memoria utilizada mediante la conversión de las columnas de objeto a categóricas y reducir el tipo de dato de las numéricas. (optimización memory usage: de 10,4 MB a 7,5 MB)
 
-Se han calculado datos estadísticos de las columnas que se han considerado como significativas.
+TÉCNICAS DE DATA CLEANING UTILIZADAS:
+- null values
+- columns drop 
+- duplicated data 
+- string manipulation
+- apply fn
+- categorize
+- otras
 
-Por último, se ha revisado y optimizado la memoria utilizada mediante la conversión de las columnas de objeto a categóricas y reducir el tipo de dato de las numéricas. (optimización memory usage: de 10,4 MB a 7,5 MB)
+Entregables:
+- carpeta .src con el jupyter notebook utilizado y un archivo .src con las funciones utilizadas
+- fichero csv 'attacks_clean'
+- fichero excel 'attacks_clean_con gráficos' con los gráficos y datos concluyentes más relevantes
 
 
     
