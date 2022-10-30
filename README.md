@@ -1,6 +1,6 @@
 # -Shark-attacks-David-Tejedor
 
-Set de datos inicial: attacks.csv
+DATA SET ORIGINAL: attacks.csv
 
 INDICACIONES RECIBIDAS:
 - Para borrar columnas deben tener almenos 80% valores nulos.
@@ -46,7 +46,7 @@ PROCESO DE LIMPIEZA REALIZADO:
     - Se ha creado una nueva columna 'time_2' donde se identifica la etapa del día en la que se registró el ataque en la columna 'time'.
     - Se ha creado una nueva columna 'species_2' donde se agrupan las especies de la columna 'sepcies'.
 - Se ha detectado que existen valores "invalid" en las columnas species (103) y type (547). 103 en ambas columnas. Se realizará un Check antes de proceder a borrarlas.
-- Se han calculado datos estadísticos de las columnas que se han considerado como significativas.
+- Se han calculado datos estadísticos (moda, media, mediana, desviación estándar, máx, mín) de las columnas que se han considerado como significativas.
 - Se ha revisado y optimizado la memoria utilizada mediante la conversión de las columnas de objeto a categóricas y reducir el tipo de dato de las numéricas. (optimización memory usage: de 10,4 MB a 7,5 MB)
 
 TÉCNICAS DE DATA CLEANING UTILIZADAS:
@@ -61,41 +61,5 @@ TÉCNICAS DE DATA CLEANING UTILIZADAS:
 Entregables:
 - carpeta .src con el jupyter notebook utilizado y un archivo .src con las funciones utilizadas
 - fichero csv 'attacks_clean'
-- fichero excel 'attacks_clean_con gráficos' con los gráficos y datos concluyentes más relevantes
-
-
-    
-Detalle del proceso de limpieza por columna: 
-    - Columnas numéricas:
-    - Age - VN - 10 nan - Se borran 8 filas y se corrigen los otros 2
-          - VI - Para la mayoría (donde se indicaba '0') se han sustituido por 'to be deeply clarified' (se revisará columna Date).
-    - Columnas categóricas:
-    - Casenumber - VN - Se sustituye por valor concreto obtenido de columna Date
-                 - VI - Se omiten en esta limpieza inicial.
-    - Type - VN - Se sustituyen por 'unknown'.
-           - VI - Se realizará un Check antes de borrar los inconsistentes identificados.
-    - Country - VN - Se sustituyen por 'unknown'.
-              - VI - Pendientes revisar en profunidad.
-    - Area - VN - Se sustituyen por 'unknown'.
-           - VI - Pendientes revisar en profunidad.
-    - Activity - VN - Se sustituyen por 'unknown'.
-               - VI - En principio ok.
-    - Name - VN - Se sustituyen por 'unknown'. 
-           - VI - Pendientes revisar.
-    - Sex - VN - Se sustituyen por 'unknown'.
-          - VI - Se revisan y actualizan.
-    - Age - VN - Se sustituyen por 'unknown'. Se realizará un check por si se quiere estimar la edad del casi 50% unknowns.
-          - VI - Se ha realizado limpieza completa.
-    - Injury - VN - Se sustituyen por 'unknown'. 
-             - VI - Pendientes revisar.
-    - Fatal(y/n) - VN - Se sustituyen por 'unknown'.
-                 - VI - Se revisan y actualizan.
-    - Time - VN - Se sustituyen por 'unknown'.
-           - VI - Se revisan y se decide crear una columna nueva 'time_2' donde se indica la etapa del día en la que ocurre el accidente (morning/afternoon/night).
-    - Species - VN - Se sustituyen por 'unknown'.
-              - VI - Se decide crear una nueva tabla donde se indican las especies más habituales, y para el resto se indica 'shark type not clearly specified' que será revisado más adelante.
-    - Investigator_or_Source - VN - Se sustituyen por 'unknown'.
-                             - VI - Pendiente revisar
-    - hrefformula - N - Se sustituyen por 'unknown'.
-                  - VI - Pendiente revisar   
+- fichero excel 'attacks_clean_con gráficos' con los gráficos y datos concluyentes más relevantes 
 
