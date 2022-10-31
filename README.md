@@ -1,5 +1,7 @@
 # -Shark-attacks-David-Tejedor
 
+![image](https://user-images.githubusercontent.com/115221622/199080090-ff51c0e1-ff5e-4580-82d0-6859aaa2ee7e.png)
+
 DATA SET ORIGINAL: attacks.csv
 
 INDICACIONES RECIBIDAS:
