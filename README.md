@@ -2,14 +2,17 @@
 
 ![image](https://user-images.githubusercontent.com/115221622/199080090-ff51c0e1-ff5e-4580-82d0-6859aaa2ee7e.png)
 
-DATA SET ORIGINAL: attacks.csv
+### DATA SET ORIGINAL: attacks.csv
 
-INDICACIONES RECIBIDAS:
+### INDICACIONES RECIBIDAS:
 - Para borrar columnas deben tener almenos 80% valores nulos.
 - Al menos deben quedar 6000 filas.
 - Mismo tipo de dato por columna.
 
-CONSIDERACIONES ADOPTADAS DURANTE EL PROYECTO:
+### PLAZO DEL PROYECTO
+2 días
+
+### CONSIDERACIONES ADOPTADAS DURANTE EL PROYECTO:
 - Durante el proceso de limpieza del df se ha dado prioridad a las siguientes columnas de datos, ya que son las que permitirán obtener unas primeras estadísticas más significativas:
     - Year
     - Type
@@ -20,7 +23,7 @@ CONSIDERACIONES ADOPTADAS DURANTE EL PROYECTO:
     - Time
     - Species
 
-PROCESO DE LIMPIEZA REALIZADO:
+### PROCESO DE LIMPIEZA REALIZADO:
 - Se importan las librerías Numpy y Pandas
 - Se importa el fichero csv y se realiza una copia del df original.
 - Se realiza una exploración inicial del df.
@@ -51,7 +54,7 @@ PROCESO DE LIMPIEZA REALIZADO:
 - Se han calculado datos estadísticos (moda, media, mediana, desviación estándar, máx, mín) de las columnas que se han considerado como significativas.
 - Se ha revisado y optimizado la memoria utilizada mediante la conversión de las columnas de objeto a categóricas y reducir el tipo de dato de las numéricas. (optimización memory usage: de 10,4 MB a 7,5 MB)
 
-TÉCNICAS DE DATA CLEANING UTILIZADAS:
+##### TÉCNICAS DE DATA CLEANING UTILIZADAS:
 - null values
 - columns drop 
 - duplicated data 
@@ -60,8 +63,12 @@ TÉCNICAS DE DATA CLEANING UTILIZADAS:
 - categorize
 - otras
 
-Entregables:
-- carpeta .src con el jupyter notebook utilizado y un archivo .src con las funciones utilizadas
-- fichero csv 'attacks_clean'
-- fichero excel 'attacks_clean_con gráficos' con los gráficos y datos concluyentes más relevantes 
+### Entregables:
+- carpeta src con el jupyter notebook utilizado (clean.ypynb) un otro jupyter notebook (funciones.ypnb) con las funciones utilizadas
+- carpeta data:
+    - fichero csv 'attacks_clean' tras la limpieza realizada
+    - fichero excel 'attacks_clean_con gráficos_basico' con algunos gráficos muy básicos y datos concluyentes más relevantes
+- carpeta ppt:
+    - presentación muy básica del proyecto realizado
+
 
